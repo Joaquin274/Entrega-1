@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeTruck</title>
+    <link rel="icon" href="Imagenes/Animetruck.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="filtradoYLogin.js" defer></script>
+    <script src="busqueda.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="Imagenes/Animetruck.png" id="Logo"></a>
+        <div class="search-login">
+            <nav>
+                <a href="index.html">INICIO</a>
+                <a href="Directorio.html">DIRECTORIO</a>
+            </nav>
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-btn"><img src="Imagenes/Buscar.png" alt="Buscar"></button>
+            <button id="login-btn">LOGIN</button>
+        </div>
+    </header>
+    <main>
+        <p class="listado">-lista completa de animes</p>
+        <div class="filter-container">
+            <div class="filter">
+                <button class="filter-btn" onclick="toggleDropdown('genero-dropdown')">Género: Todos</button>
+                <div id="genero-dropdown" class="dropdown-content">
+                    <label><input type="checkbox" data-genre="Acción" onchange="filterAnimes()"> Acción</label>
+                    <label><input type="checkbox" data-genre="Aventura" onchange="filterAnimes()"> Aventura</label>
+                    <label><input type="checkbox" data-genre="Romance" onchange="filterAnimes()"> Romance</label>
+                </div>
+            </div>
+        </div>
+        <div class="anime-container">
+            <!-- Fila 1 -->
+            <a href="https://www3.animeflv.net/anime/boku-no-hero-academia-2016" class="anime-card" data-genre="Acción">
+                <img src="Imagenes/Boku no hero P.jpg" alt="Anime 1">
+                <p>Boku no hero academia</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/tate-no-yuusha-no-nariagari" class="anime-card" data-genre="Aventura">
+                <img src="Imagenes/Tate no yuusha P.jpg" alt="Anime 2">
+                <p>Tate no Yuusha no Nariagari</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/horimiya" class="anime-card" data-genre="Romance">
+                <img src="Imagenes/Horimiya P.jpg" alt="Anime 3">
+                <p>Horimiya</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/chiyu-mahou-no-machigatta-tsukaikata" class="anime-card" data-genre="Aventura">
+                <img src="Imagenes/Healing P.jpg" alt="Anime 4">
+                <p>The Wrong Way to Use Healing Magic</p>
+            </a>
+
+            <!-- Fila 2 -->
+            <a href="https://www3.animeflv.net/anime/kaguyasama-wa-kokurasetai-tensaitachi-no-renai-zunousen" class="anime-card" data-genre="Romance">
+                <img src="Imagenes/Kaguya P.jpg" alt="Anime 5">
+                <p>Kaguya sama love is war</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/kimetsu-no-yaiba" class="anime-card" data-genre="Acción">
+                <img src="Imagenes/Demons slayer P.jpg" alt="Anime 6">
+                <p>Kimetsu no Yaiba</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/toradora" class="anime-card" data-genre="Romance">
+                <img src="Imagenes/TORADORA P.jpg" alt="Anime 7">
+                <p>Toradora</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/dungeon-meshi" class="anime-card" data-genre="Aventura">
+                <img src="Imagenes/Dungeon Meshi P.jpg" alt="Anime 8">
+                <p>Dungeon Meshi</p>
+            </a>
+            <a href="https://www3.animeflv.net/anime/jujutsu-kaisen-tv" class="anime-card" data-genre="Acción">
+                <img src="Imagenes/JJK P.jpg" alt="Anime 9">
+                <p>Jujutsu Kaisen</p>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 AnimeTruck. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
